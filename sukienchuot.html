@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh su kien chuot</title>
+    <style>
+        img
+    </style>
+</head>
+<body>
+<form>
+    <!-- Bước 1: Tạo giao diện -->
+    <img id="myImage" src="images/ball.jpg" />
+    <p>click button below to move the image to right</p>
+    <button type="button" name="click me" onclick="moveRight()">Click me</button>
+</form>
+<script>
+    //Bước 2: Tạo biến imgObj để lưu ảnh
+    let imgObj = null;
+    // Bước 3: Sử dụng hàm getElementById ()
+    //để nhận được một đối tượng DOM và sau đó gán nó cho biến imgObj.
+    function init() {
+        imgObj = document.getElementById('myImage');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+    }
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    }
+    window.onload = init();
+</script>
+
+</body>
+</html>
